@@ -4,7 +4,7 @@
       <v-col>
         <v-card>
           <!-- HOMEviewのときはこちらを表示 -->
-          <div v-if="urlPath === '/'">
+          <div v-if="urlPath === '/my_page/'">
             <router-link :to=link>
               <v-img 
               height="250"
@@ -35,7 +35,7 @@
           <v-card-title
            class="pb-0 title"
            v-else>
-           <v-icon v-show="urlPath === '/'"
+           <v-icon v-show="urlPath === '/my_page/'"
            class="mr-3"
            >
             {{ icon }}
@@ -86,7 +86,7 @@ export default {
     
   },
   created: function() {
-
+    console.log(this.urlPath);
   },
   components: {
     MosyaDropMenu,
