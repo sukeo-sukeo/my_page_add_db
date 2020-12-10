@@ -86,7 +86,7 @@ export default {
     
   },
   created: function() {
-    console.log(this.urlPath);
+  
   },
   components: {
     MosyaDropMenu,
