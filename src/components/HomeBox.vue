@@ -4,25 +4,18 @@
       <v-col>
         <v-card>
           <div>
-            <a :href=link target="_blank">
+            <router-link :to=link>
               <v-img 
               height="250"
               :src='src'
               >
               </v-img>
-            </a>
+            </router-link>
           </div>
-          <!-- サイト模写一覧のドロップメニュー-->
-          <v-card-title
-           class="py-0" 
-           v-if="title === 'サイト模写'">
-          <mosya-drop-menu>
-          </mosya-drop-menu>
-          </v-card-title>
-          <!-- 基本はこちらを表示 -->
-          <v-card-title
-           class="pb-0 title"
-           v-else>
+          <v-card-title class="pb-0 title">
+           <v-icon class="mr-3">
+            {{ icon }}
+           </v-icon>
             {{ title }}
           </v-card-title>
           <v-card-title
@@ -47,10 +40,9 @@
 </template>
 
 <script>
-import MosyaDropMenu from './MosyaDropMenu.vue'
 
 export default {
-  neme: 'ContentBox',
+  neme: 'HomeBox',
   props: {
     link: String,
     title: String,
@@ -69,9 +61,6 @@ export default {
   },
   created: function() {
   
-  },
-  components: {
-    MosyaDropMenu,
   }
 }
 </script>

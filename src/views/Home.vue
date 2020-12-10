@@ -10,7 +10,7 @@
    <v-row justify="center">
      <v-col cols='10' sm='5' md='4' lg='3'
       v-for="item in contentItems" :key="item.link">
-       <content-box :link=item.link :title=item.title :src=item.src :icon=item.icon></content-box>
+       <home-box :link=item.link :title=item.title :src=item.src :icon=item.icon></home-box>
      </v-col>
    </v-row>
 
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import ContentBox from '../components/ContentBox.vue'
+import HomeBox from '../components/HomeBox.vue'
 import ProfileBox from '../components/ProfileBox.vue'
 
 export default {
@@ -54,7 +54,7 @@ export default {
     }
   },
   components: {
-    ContentBox,
+    HomeBox,
     ProfileBox
   }
 }
