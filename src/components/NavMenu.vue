@@ -6,7 +6,7 @@
         <router-link class="mr-5" to="/product">PRODUCT</router-link>
         <router-link class="mr-5" to="/skill">SKILL</router-link>
         <router-link class="mr-5" to="/learned">LEARNED</router-link>
-        <router-link class="mr-5" to="/contact">CONTACT</router-link>
+        <router-link to="/contact">CONTACT</router-link>
       </v-col>
     </v-row>
   </v-container>

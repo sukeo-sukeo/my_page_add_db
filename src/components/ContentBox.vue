@@ -5,7 +5,7 @@
         <v-card>
           <div>
             <a :href=link target="_blank">
-              <v-img 
+              <v-img
               height="250"
               :src='src'
               >

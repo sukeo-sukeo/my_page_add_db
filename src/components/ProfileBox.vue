@@ -5,7 +5,10 @@
         <v-card>
           <v-card-title>
             <h1 style="line-height: initial;">
-              Welcome to <br class="d-flex d-sm-none"><span style="font-size:50px;">YUSUKE's</span> portfolio!
+              Welcome to 
+              <br class="d-flex d-sm-none">
+              <span style="font-size:50px;">YUSUKE's</span>
+               portfolio!
             </h1>
           </v-card-title>
           <v-card-text>
@@ -26,8 +29,7 @@
               </v-col>
                <v-col cols="12">
                 <v-card-text>
-                  Lorem ipsum dolor sit amet.
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, numquam!
+                  <clock-box></clock-box>
                 </v-card-text>
               </v-col>
             </v-row>
@@ -39,8 +41,10 @@
 </template>
 
 <script>
+import ClockBox from './ClockBox.vue'
 
 export default {
+  components: { ClockBox },
   name: 'ProfileBox',
   data: function() {
     return {

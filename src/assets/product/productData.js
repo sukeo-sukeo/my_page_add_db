@@ -3,7 +3,7 @@
 export const madeItemData = [
          {
            id: 5,
-           path: "image-airbnb.png",
+           path: "website.png",
            title: "サイト模写",
            link:
              "https://sukeo-sukeo.github.io/airbnb-copysite/airbnb/index.html",

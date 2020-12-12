@@ -6,7 +6,11 @@
           <div>
             <a :href=link target="_blank">
               <v-img 
-              height="250"
+              max-height="250"
+              height="fit-content"
+              width="fit-content"
+              contain
+              class="my-0 mx-auto"
               :src='src'
               >
               </v-img>

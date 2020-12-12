@@ -40,7 +40,7 @@ export default {
         },
         {
           link: '/learned',
-          title: '学習に使用したもの',
+          title: '学んだ書籍/動画',
           src: require('../assets/home/img/learned.jpg'),
           icon: 'mdi-book-open-page-variant-outline'
         },

@@ -1,5 +1,10 @@
 <template>
   <v-container>
+    <v-row>
+      <v-col>
+        <h1 style="text-align: center;">制作物</h1>
+      </v-col>
+    </v-row>
     <v-row justify="center">
       <v-col cols="10" sm="5" md="4"
        v-for="item in reverseItems" :key="item.id">
