@@ -5,7 +5,7 @@
       <side-menu ></side-menu>
     </v-navigation-drawer>
 
-    <v-app-bar app flat dark hide-on-scroll>
+    <v-app-bar app flat dark>
       <v-row align="center" justify="space-between">
         <v-col cols="2" class="d-sm-none">
           <v-btn @click="drawer = !drawer" fab small>
