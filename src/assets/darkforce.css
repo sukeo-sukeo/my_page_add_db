@@ -12,9 +12,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /******************/
 
 html,
-#dark {margin:0; width:100%; height:100%;}
+#darkEf {margin:0; width:100%; height:100%;}
 
-#dark {
+#darkEf {
 overflow:hidden;
 background:#000;
 	-webkit-perspective:300;

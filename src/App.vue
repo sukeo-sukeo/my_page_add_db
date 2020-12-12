@@ -1,7 +1,7 @@
 <template>
   <v-app>
 
-    <v-navigation-drawer app v-model="drawer">
+    <v-navigation-drawer app v-model="drawer" class="d-flex d-sm-none">
       <side-menu></side-menu>
     </v-navigation-drawer>
 
