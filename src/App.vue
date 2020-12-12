@@ -5,12 +5,11 @@
       <side-menu></side-menu>
     </v-navigation-drawer>
 
-    <v-app-bar app flat dark hide-on-scroll>
+    <v-app-bar app flat dark>
       <v-row align="center" justify="space-between">
         <v-col cols="2" class="d-sm-none">
-          <v-btn @click="drawer = !drawer"
-          >
-          <v-icon large>mdi-menu-open</v-icon>
+          <v-btn @click="drawer = !drawer" fab>
+            <v-icon>mdi-menu-open</v-icon>
           </v-btn>
         </v-col>
         <v-col cols="6" sm="4" md="3">
