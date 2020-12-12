@@ -1,7 +1,7 @@
 <template>
   <v-app>
 
-    <v-navigation-drawer app v-model="drawer">
+    <v-navigation-drawer app v-model="drawer" class="d-flex d-sm-none">
       <side-menu></side-menu>
     </v-navigation-drawer>
 
@@ -13,7 +13,9 @@
           </v-btn>
         </v-col>
         <v-col cols="6" sm="4" md="3">
-          <h1>ABOUT ME</h1>
+          <router-link to="/">
+            <h1 style="color: white;">ABOUT ME</h1>
+          </router-link>
         </v-col>
         <v-col sm="5" class="d-none d-sm-flex">
           <nav-menu></nav-menu>
@@ -23,7 +25,7 @@
         </v-col>
       </v-row>
     </v-app-bar>
-    <v-main>
+    <v-main class="pb-14">
       <router-view></router-view>
     </v-main>
     <footer-bar

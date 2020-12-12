@@ -1,9 +1,11 @@
 <template>
-  <v-row>
-    <v-col>
-      <h1 style="text-align: center;" id="title">{{ title }}</h1>
-    </v-col>
-  </v-row>
+  <v-container>
+    <v-row>
+      <v-col>
+        <h1 style="text-align: center;" id="title">{{ title }}</h1>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>

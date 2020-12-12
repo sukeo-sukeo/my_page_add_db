@@ -5,6 +5,13 @@
         <v-card>
           <div>
             <a :href=link target="_blank">
+              <v-btn fab
+              x-small
+              class="ma-2" 
+              style="position: absolute; right: 0; z-index: 4;"
+              >
+              <v-icon>mdi-arrow-top-right-bold-outline</v-icon>
+              </v-btn>
               <v-img 
               max-height="250"
               height="fit-content"
