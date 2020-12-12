@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row align="center">
+    <v-row>
       <v-col
        class="pa-0"
        v-for="icon in snsIcons" :key="icon.type"

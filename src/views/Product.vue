@@ -1,10 +1,6 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col>
-        <h1 style="text-align: center;">制作物</h1>
-      </v-col>
-    </v-row>
+    <title-box title="制作物"></title-box>
     <v-row justify="center">
       <v-col cols="10" sm="5" md="4"
        v-for="item in reverseItems" :key="item.id">
@@ -23,11 +19,13 @@
 
 <script>
 import ProductBox from '../components/ProductBox.vue'
+import TitleBox from '../components/TitleBox.vue';
 
 export default {
   name: 'Product',
   components: {
-    ProductBox
+    ProductBox,
+    TitleBox
   },
   data: function() {
     return {

@@ -46,7 +46,7 @@ export default {
         },
         {
           link: '/contact',
-          title: 'コンタクト/SNS',
+          title: 'コンタクト',
           src: require('../assets/home/img/contact.jpg'),
           icon: 'mdi-card-account-mail-outline'
         }

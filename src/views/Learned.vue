@@ -1,10 +1,6 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col>
-        <h1 style="text-align: center;">学んだ書籍/動画</h1>
-      </v-col>
-    </v-row>
+    <title-box title="学んだ書籍/動画"></title-box>
     <v-row justify="center">
       <v-col cols="10" sm="4" md="3"
        v-for="data in requireData()" :key="data.title">
@@ -25,11 +21,13 @@
 
 <script>
 import BooksBox from '../components/BooksBox.vue';
+import TitleBox from '../components/TitleBox.vue';
 
 export default {
   name: 'Learned',
   components: { 
-    BooksBox
+    BooksBox,
+    TitleBox 
     },
   data: () => {
     return {

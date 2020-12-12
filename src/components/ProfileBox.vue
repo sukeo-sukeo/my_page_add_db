@@ -4,7 +4,7 @@
       <v-col>
         <v-card>
           <v-card-title>
-            <h1 style="line-height: initial;">
+            <h1 style="line-height: initial;" id="title">
               Welcome to 
               <br class="d-flex d-sm-none">
               <span style="font-size:50px;">YUSUKE's</span>
@@ -28,8 +28,9 @@
                 </v-card-text>
               </v-col>
                <v-col cols="12">
-                <v-card-text>
-                  <clock-box></clock-box>
+                <v-card-text class="pa-0">
+                  <span class="green--text title">学習開始から...</span>
+                  <clock-box class="black--text"></clock-box>
                 </v-card-text>
               </v-col>
             </v-row>
@@ -42,15 +43,20 @@
 
 <script>
 import ClockBox from './ClockBox.vue'
+import ShuffleText from "shuffle-text"
 
 export default {
   components: { ClockBox },
   name: 'ProfileBox',
   data: function() {
     return {
-
     }
   },
+  mounted: function() {
+    const title = document.getElementById('title')
+    const shulle =  new ShuffleText(title)
+    shulle.start()
+  }
 }
 </script>
 

@@ -5,10 +5,10 @@
       <side-menu></side-menu>
     </v-navigation-drawer>
 
-    <v-app-bar app flat dark>
+    <v-app-bar app flat dark hide-on-scroll>
       <v-row align="center" justify="space-between">
         <v-col cols="2" class="d-sm-none">
-          <v-btn @click="drawer = !drawer" fab>
+          <v-btn @click="drawer = !drawer" fab small>
             <v-icon>mdi-menu-open</v-icon>
           </v-btn>
         </v-col>
@@ -18,7 +18,7 @@
         <v-col sm="5" class="d-none d-sm-flex">
           <nav-menu></nav-menu>
         </v-col>
-        <v-col cols="4" sm="3" md="2" style="margin-top: 100px;">
+        <v-col cols="4" sm="3" md="2" style="margin-top: 80px;">
           <sns-icon-group color="black"></sns-icon-group>
         </v-col>
       </v-row>

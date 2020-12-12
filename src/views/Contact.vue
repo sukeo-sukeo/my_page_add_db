@@ -1,11 +1,7 @@
 <template>
   <v-form>
     <v-container>
-      <v-row>
-      <v-col>
-        <h1 style="text-align: center;">コンタクト/SNS</h1>
-      </v-col>
-    </v-row>
+      <title-box title="コンタクト"></title-box>
       <v-row>
         <v-col>
           comming soon...
@@ -16,7 +12,9 @@
 </template>
 
 <script>
+import TitleBox from '../components/TitleBox.vue'
 export default {
   name: 'Contact',
+  components: {TitleBox}
 }
 </script>

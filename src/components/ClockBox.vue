@@ -1,7 +1,8 @@
 <template>
-  <div>
-    <p>{{ now }}</p>
-  </div>
+  <v-row justify="center">
+      <p class="display-2">{{ day }}</p>
+      <p class="display-1" style="align-self: center;">{{ now }}</p>
+   </v-row>
 </template>
 
 <script>
@@ -9,6 +10,7 @@ export default {
   name: 'ClockBox',
   data: function() {
     return {
+      day: null,
       now: null
     }
   },
@@ -22,21 +24,18 @@ export default {
         minute:  getNowDate.getMinutes(),
         second: getNowDate.getSeconds()
       }  
-        
-        
-      
-      // console.log(arowDays);
-
-      // console.log(a);
-      // this.now = date.getHours() + ":"
-      //   + date.getMinutes() + ":" +
-      //   date.getSeconds();
       return arowTime
+    },
+    updateTime: function() {
+       const hour = String(this.time().hour)
+       const minute = String(this.time().minute)
+       const second = String(this.time().second)
+       this.day = `${this.time().day - 1}日と`
+       this.now = `${hour.padStart(2, '0')}時間${minute.padStart(2, '0')}分${second.padStart(2, '0')}秒`
     }
   },
-  created: function() {
-    console.log(this.time());
-    this.now = `${this.time().day}:${this.time().hour}:${this.time().minute}:${this.time().second}` 
-  },
+  mounted: function() {
+    setInterval(this.updateTime, 1000)
+  }
 }
 </script>
