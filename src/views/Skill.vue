@@ -3,13 +3,13 @@
     <title-box title="学んだ技術"></title-box>
     <v-row justify="center" class="mb-5">
       <v-col cols="9" sm="5" md="4"
-      v-for="(item, i) in Object.keys(skillItems.devicons)" :key="item.i"
+      v-for="(item, i) in mydata" :key="item.i"
       >
         <v-card>
           <v-card-title class="grey--text pa-2"
           style="background-color: ghostwhite;">
           <v-icon class="mr-2">mdi-laptop-chromebook</v-icon>
-            {{  uppercase(item) }}
+            {{  uppercase(item.category) }}
           </v-card-title>
           <v-divider></v-divider>
           <v-card-text  v-for="item in skillItems.devicons[Object.keys(skillItems.devicons)[i]]" :key="item.id">
@@ -44,13 +44,26 @@ export default {
   components: { TitleBox },
   data: function() {
     return {
-      skillItems: require('../assets/skill/skillData.js')
+      skillItems: require('../assets/skill/skillData.js'),
+      mydata: []
     }
   },
   methods: {
     uppercase: function(val) {
       return val.toUpperCase()
     }
+  },
+  created: function() {
+    console.log(this.skillItems);
+    this.$axios.get('/api/skills')
+    .then((res) => this.mydata = res.data)
+    .then(() => console.log(this.mydata))
+    .then(() => {
+      this.mydata.forEach(d => {
+        console.log(d);
+      })
+    })
   }
 }
+
 </script>
